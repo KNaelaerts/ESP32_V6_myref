@@ -1,0 +1,140 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 208.81399128485606,
+        "y": -165.09381698197726
+      },
+      "data": {}
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "position": {
+        "x": 222.03497821214012,
+        "y": 464.52783731731313
+      },
+      "data": {}
+    },
+    {
+      "id": "func_1792866211964_0",
+      "type": "func",
+      "position": {
+        "x": 191.43004357571974,
+        "y": -97.2798256971212
+      },
+      "data": {
+        "fn": "myADC_setup",
+        "ret": "void",
+        "params": "int channel",
+        "header": "myADC.h",
+        "args": "6+1",
+        "result": "",
+        "collapsed": "true"
+      }
+    },
+    {
+      "id": "func_1792866218109_1",
+      "type": "func",
+      "position": {
+        "x": 210.3219448040884,
+        "y": 55.08902759795579
+      },
+      "data": {
+        "fn": "myADC_readMV",
+        "ret": "int",
+        "params": "int channel",
+        "header": "myADC.h",
+        "args": "6+1",
+        "result": "int x",
+        "collapsed": "true"
+      }
+    },
+    {
+      "id": "while_1792866222506_2",
+      "type": "while",
+      "position": {
+        "x": 155.49602324038383,
+        "y": -23.36804067067169
+      },
+      "data": {
+        "cond": "1"
+      }
+    },
+    {
+      "id": "endloop_1792866225262_3",
+      "type": "endloop",
+      "position": {
+        "x": 179.73608134134352,
+        "y": 376.5946296063826
+      },
+      "data": {}
+    },
+    {
+      "id": "delay_1792866230924_4",
+      "type": "delay",
+      "position": {
+        "x": 216.15500726261996,
+        "y": 237.99683586478912
+      },
+      "data": {}
+    },
+    {
+      "id": "print_1792866288125_5",
+      "type": "print",
+      "position": {
+        "x": 214.57312055949114,
+        "y": 127.39190122836865
+      },
+      "data": {
+        "text": "\"de spanning is %d\\n\" , x "
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "xy-edge__start-func_1792866211964_0",
+      "source": "start",
+      "target": "func_1792866211964_0",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__func_1792866211964_0-while_1792866222506_2",
+      "source": "func_1792866211964_0",
+      "target": "while_1792866222506_2",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__while_1792866222506_2body-func_1792866218109_1",
+      "source": "while_1792866222506_2",
+      "target": "func_1792866218109_1",
+      "sourceHandle": "body"
+    },
+    {
+      "id": "xy-edge__func_1792866218109_1-print_1792866288125_5",
+      "source": "func_1792866218109_1",
+      "target": "print_1792866288125_5",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__print_1792866288125_5-delay_1792866230924_4",
+      "source": "print_1792866288125_5",
+      "target": "delay_1792866230924_4",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__delay_1792866230924_4-endloop_1792866225262_3",
+      "source": "delay_1792866230924_4",
+      "target": "endloop_1792866225262_3",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__endloop_1792866225262_3-end",
+      "source": "endloop_1792866225262_3",
+      "target": "end",
+      "sourceHandle": null
+    }
+  ]
+}

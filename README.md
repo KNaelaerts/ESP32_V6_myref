@@ -9,6 +9,7 @@ kunnen hier worden toegevoegd en in dit project worden uitgeprobeerd.
 | Naam | Bestaat | Map |
 |---|---|---|
 | `myGPIO` | Ja | `components/basic/` |
+| `myADC` | Ja | `components/basic/` |
 | `myESP_S3_mini_board` | Ja | `components/boards/` |
 
 

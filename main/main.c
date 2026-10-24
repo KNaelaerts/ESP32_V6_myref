@@ -5,24 +5,19 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
-#include "myGPIO.h"
-#include "myESP_S3_mini_board.h"
-
-#define KNOP MB_INT_PIN
-#define LED MB_PWM_PIN
+#include "myADC.h"
 
 static const char *TAG = "myflow";
 
+#define ADC_PIN 6
+#define ADC_Kanaal ADC_PIN -1   //dit geld enkel voor ADC1 op ESP32S3
+
 void app_main(void)
 {
-    myGPIO_LED_Setup(LED);
-    myGPIO_KNOP_Setup(KNOP);
+    myADC_setup(ADC_Kanaal);
     while (1) {
-        int x = myGPIO_KNOP_GetFlank(KNOP);
-        if (x) {
-            myGPIO_LED_Toggle(LED);
-        } else {
-        }
-        vTaskDelay(pdMS_TO_TICKS(10));
+        int x = myADC_readMV(ADC_Kanaal);
+        ESP_LOGI(TAG, "de spanning is %d\n" , x );
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
