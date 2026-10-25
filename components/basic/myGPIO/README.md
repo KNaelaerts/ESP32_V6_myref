@@ -6,7 +6,6 @@ Eenvoudige functies om LED's en knoppen aan te sturen op de ESP32-S3 Mini.
 
 ![Het board met LED en knop](./../images/Button_click.png)
 
-> Plaats je foto van het board als `images/board.png` in deze map.
 
 ## Aansluitingen
 

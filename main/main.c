@@ -5,19 +5,18 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
-#include "myADC.h"
+#include "myUltrasoon_HCSR04.h"
 
 static const char *TAG = "myflow";
-
-#define ADC_PIN 6
-#define ADC_Kanaal ADC_PIN -1   //dit geld enkel voor ADC1 op ESP32S3
+#define TRIG 4
+#define ECHO 5
 
 void app_main(void)
 {
-    myADC_setup(ADC_Kanaal);
+    myUltrasoon_continueSetup(TRIG, ECHO);
     while (1) {
-        int x = myADC_readMV(ADC_Kanaal);
-        ESP_LOGI(TAG, "de spanning is %d\n" , x );
+        int afstand = myUltrasoon_multiReadCM();
+        ESP_LOGI(TAG, "de afstand is %d\n",afstand);
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }

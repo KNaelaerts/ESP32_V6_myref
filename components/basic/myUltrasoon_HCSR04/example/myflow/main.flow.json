@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 223.38920963550072,
+        "y": -151.7993136321898
+      },
+      "data": {}
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "position": {
+        "x": 220.0834152721233,
+        "y": 468.3917126662644
+      },
+      "data": {}
+    },
+    {
+      "id": "func_1792955442472_0",
+      "type": "func",
+      "position": {
+        "x": 205.3369761050803,
+        "y": -98.45869298511559
+      },
+      "data": {
+        "fn": "myUltrasoon_continueSetup",
+        "ret": "void",
+        "params": "int trig_pin, int echo_pin",
+        "header": "myUltrasoon_HCSR04.h",
+        "args": "TRIG, ECHO",
+        "result": ""
+      }
+    },
+    {
+      "id": "while_1792955445485_1",
+      "type": "while",
+      "position": {
+        "x": 172.45915979530815,
+        "y": -9.380246533269421
+      },
+      "data": {}
+    },
+    {
+      "id": "endloop_1792955448017_2",
+      "type": "endloop",
+      "position": {
+        "x": 184.00870232364662,
+        "y": 395.4695494788265
+      },
+      "data": {}
+    },
+    {
+      "id": "delay_1792955459444_3",
+      "type": "delay",
+      "position": {
+        "x": 207.02351164641124,
+        "y": 300.8847923519817
+      },
+      "data": {
+        "ms": "1000"
+      }
+    },
+    {
+      "id": "print_1792955462307_4",
+      "type": "print",
+      "position": {
+        "x": 211.71062804639746,
+        "y": 200.27142633877753
+      },
+      "data": {
+        "text": "\"de afstand is %d\\n\",afstand"
+      }
+    },
+    {
+      "id": "func_1792955713716_5",
+      "type": "func",
+      "position": {
+        "x": 204.72923352532626,
+        "y": 83.98835938025485
+      },
+      "data": {
+        "fn": "myUltrasoon_multiReadCM",
+        "ret": "int",
+        "params": "",
+        "header": "myUltrasoon_HCSR04.h",
+        "args": "",
+        "result": "int afstand"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "xy-edge__start-func_1792955442472_0",
+      "source": "start",
+      "target": "func_1792955442472_0",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__func_1792955442472_0-while_1792955445485_1",
+      "source": "func_1792955442472_0",
+      "target": "while_1792955445485_1",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__while_1792955445485_1body-func_1792955713716_5",
+      "source": "while_1792955445485_1",
+      "target": "func_1792955713716_5",
+      "sourceHandle": "body"
+    },
+    {
+      "id": "xy-edge__func_1792955713716_5-print_1792955462307_4",
+      "source": "func_1792955713716_5",
+      "target": "print_1792955462307_4",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__print_1792955462307_4-delay_1792955459444_3",
+      "source": "print_1792955462307_4",
+      "target": "delay_1792955459444_3",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__delay_1792955459444_3-endloop_1792955448017_2",
+      "source": "delay_1792955459444_3",
+      "target": "endloop_1792955448017_2",
+      "sourceHandle": null
+    }
+  ]
+}
