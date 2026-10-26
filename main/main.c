@@ -6,17 +6,23 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 #include "myUltrasoon_HCSR04.h"
+#include "myRMT.h"
+#include "myESP_S3_mini_board.h"
+
+#define LED LED_STATUS_PIN
+#define TRIG MB_PWM_PIN
+#define ECHO MB_INT_PIN
 
 static const char *TAG = "myflow";
-#define TRIG 4
-#define ECHO 5
 
 void app_main(void)
 {
-    myUltrasoon_continueSetup(TRIG, ECHO);
+    myUltrasoon_continueSetup(TRIG,ECHO);
+    myRMT_OutputSetup(LED);
     while (1) {
-        int afstand = myUltrasoon_multiReadCM();
-        ESP_LOGI(TAG, "de afstand is %d\n",afstand);
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        int x = myUltrasoon_multiReadCM();
+        myRMT_OutputWS2812(x,0,0);
+        ESP_LOGI(TAG, "het getal is %d\n", x);
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }

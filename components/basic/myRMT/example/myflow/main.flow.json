@@ -1,0 +1,186 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 204.30344827586208,
+        "y": -520.9099137931034
+      },
+      "data": {}
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "position": {
+        "x": 194.13977713818684,
+        "y": 395.7169734096152
+      },
+      "data": {}
+    },
+    {
+      "id": "while_1793004781494_0",
+      "type": "while",
+      "position": {
+        "x": 154.97483675455268,
+        "y": -322.6138000865491
+      },
+      "data": {
+        "cond": "1"
+      }
+    },
+    {
+      "id": "endloop_1793004783682_1",
+      "type": "endloop",
+      "position": {
+        "x": 170.39295566932608,
+        "y": 281.00143955112736
+      },
+      "data": {}
+    },
+    {
+      "id": "delay_1793004787685_2",
+      "type": "delay",
+      "position": {
+        "x": 217.59366342581524,
+        "y": 144.23933735139286
+      },
+      "data": {
+        "ms": "100"
+      }
+    },
+    {
+      "id": "print_1793004791891_3",
+      "type": "print",
+      "position": {
+        "x": 210.95524452824026,
+        "y": 45.06230370099516
+      },
+      "data": {
+        "text": "\"het getal is %d\\n\", x"
+      }
+    },
+    {
+      "id": "func_1793004877789_4",
+      "type": "func",
+      "position": {
+        "x": 187.17931034482757,
+        "y": -454.7724137931035
+      },
+      "data": {
+        "fn": "myUltrasoon_continueSetup",
+        "ret": "void",
+        "params": "int trig_pin, int echo_pin",
+        "header": "myUltrasoon_HCSR04.h",
+        "args": "TRIG,ECHO",
+        "result": "",
+        "collapsed": "true"
+      }
+    },
+    {
+      "id": "func_1793004886404_5",
+      "type": "func",
+      "position": {
+        "x": 191.74408659550056,
+        "y": -214.72035311088558
+      },
+      "data": {
+        "fn": "myUltrasoon_multiReadUS",
+        "ret": "int",
+        "params": "",
+        "header": "myUltrasoon_HCSR04.h",
+        "args": "",
+        "result": "int x"
+      }
+    },
+    {
+      "id": "func_1793004898928_6",
+      "type": "func",
+      "position": {
+        "x": 190.50000000000003,
+        "y": -397.81379310344823
+      },
+      "data": {
+        "fn": "myRMT_OutputSetup",
+        "ret": "void",
+        "params": "int pin",
+        "header": "myRMT.h",
+        "args": "LED",
+        "result": "",
+        "collapsed": "true"
+      }
+    },
+    {
+      "id": "func_1793004901874_7",
+      "type": "func",
+      "position": {
+        "x": 211.12726096483513,
+        "y": -83.09875630412063
+      },
+      "data": {
+        "fn": "myRMT_OutputWS2812",
+        "ret": "int",
+        "params": "int r, int g, int b",
+        "header": "myRMT.h",
+        "args": "x%255,(x/255)%255,(x%(256*255)",
+        "result": ""
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "xy-edge__start-func_1793004877789_4",
+      "source": "start",
+      "target": "func_1793004877789_4",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__func_1793004877789_4-func_1793004898928_6",
+      "source": "func_1793004877789_4",
+      "target": "func_1793004898928_6",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__func_1793004898928_6-while_1793004781494_0",
+      "source": "func_1793004898928_6",
+      "target": "while_1793004781494_0",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__while_1793004781494_0body-func_1793004886404_5",
+      "source": "while_1793004781494_0",
+      "target": "func_1793004886404_5",
+      "sourceHandle": "body"
+    },
+    {
+      "id": "xy-edge__func_1793004886404_5-func_1793004901874_7",
+      "source": "func_1793004886404_5",
+      "target": "func_1793004901874_7",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__func_1793004901874_7-print_1793004791891_3",
+      "source": "func_1793004901874_7",
+      "target": "print_1793004791891_3",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__print_1793004791891_3-delay_1793004787685_2",
+      "source": "print_1793004791891_3",
+      "target": "delay_1793004787685_2",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__delay_1793004787685_2-endloop_1793004783682_1",
+      "source": "delay_1793004787685_2",
+      "target": "endloop_1793004783682_1",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__endloop_1793004783682_1-end",
+      "source": "endloop_1793004783682_1",
+      "target": "end",
+      "sourceHandle": null
+    }
+  ]
+}

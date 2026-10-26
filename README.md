@@ -10,6 +10,8 @@ kunnen hier worden toegevoegd en in dit project worden uitgeprobeerd.
 |---|---|---|
 | `myGPIO` | Ja | `components/basic/` |
 | `myADC` | Ja | `components/basic/` |
+| `myUltrasoon_HCSR04` | Ja | `components/basic/` |
+| `myRMT` | Ja | `components/basic/` |
 | `myESP_S3_mini_board` | Ja | `components/boards/` |
 
 
