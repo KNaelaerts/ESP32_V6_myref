@@ -28,7 +28,7 @@ dependencies:
 
   myGPIO:
     path: components/basic/myGPIO
-    git: https://github.com/KNaelaerts/ESP32_Periferie.git
+    git: https://github.com/KNaelaerts/ESP32_V6_myref.git
 
 ```
 
@@ -41,7 +41,7 @@ dependencies:
 
   myGPIO:
     path: components/basic/myGPIO
-    git: git@github.com:KNaelaerts/ESP32_Periferie.git
+    git: git@github.com:KNaelaerts/ESP32_V6_myref.git
 
 ```
 
