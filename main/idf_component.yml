@@ -1,5 +1,7 @@
 #dependencies:
 
-#  myGPIO:
-#    path: components/myGPIO
-#    git: https://github.com/KNaelaerts/ESP32_Periferie.git
+#  myUART:
+#    path: components/myUART
+#    git: https://github.com/KNaelaerts/ESP32_Communicatie.git
+
+

@@ -12,6 +12,8 @@ kunnen hier worden toegevoegd en in dit project worden uitgeprobeerd.
 | `myADC` | Ja | `components/basic/` |
 | `myUltrasoon_HCSR04` | Ja | `components/basic/` |
 | `myRMT` | Ja | `components/basic/` |
+| `myUART` | Ja | `components/communication/` |
+| `myUSB` | Ja | `components/communication/` |
 | `myESP_S3_mini_board` | Ja | `components/boards/` |
 
 

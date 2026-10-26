@@ -31,7 +31,8 @@
         "params": "int trig_pin, int echo_pin",
         "header": "myUltrasoon_HCSR04.h",
         "args": "TRIG, ECHO",
-        "result": ""
+        "result": "",
+        "collapsed": "false"
       }
     },
     {
@@ -87,7 +88,8 @@
         "params": "",
         "header": "myUltrasoon_HCSR04.h",
         "args": "",
-        "result": "int afstand"
+        "result": "int afstand",
+        "collapsed": "true"
       }
     }
   ],
@@ -126,6 +128,12 @@
       "id": "xy-edge__delay_1792955459444_3-endloop_1792955448017_2",
       "source": "delay_1792955459444_3",
       "target": "endloop_1792955448017_2",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__endloop_1792955448017_2-end",
+      "source": "endloop_1792955448017_2",
+      "target": "end",
       "sourceHandle": null
     }
   ]
