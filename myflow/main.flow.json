@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 200,
+        "y": 20
+      },
+      "data": {}
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "position": {
+        "x": 200,
+        "y": 300
+      },
+      "data": {}
+    },
+    {
+      "id": "variable_1793047793739_0",
+      "type": "variable",
+      "position": {
+        "x": 184.88772096962282,
+        "y": 77.60830589493004
+      },
+      "data": {}
+    }
+  ],
+  "edges": []
+}
