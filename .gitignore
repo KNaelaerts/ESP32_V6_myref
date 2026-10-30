@@ -1,6 +1,8 @@
 build/
 .devcontainer/
 .vscode/
+dependencies.lock
+
 
 # ESP-IDF specific build outputs
 *.bin

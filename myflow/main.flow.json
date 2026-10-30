@@ -4,8 +4,8 @@
       "id": "start",
       "type": "start",
       "position": {
-        "x": 200,
-        "y": 20
+        "x": 202.92893473349602,
+        "y": -51.73584412238583
       },
       "data": {}
     },
@@ -13,20 +13,111 @@
       "id": "end",
       "type": "end",
       "position": {
-        "x": 200,
-        "y": 300
+        "x": 167.75195282651458,
+        "y": 465.0684017732609
       },
       "data": {}
     },
     {
-      "id": "variable_1793047793739_0",
-      "type": "variable",
+      "id": "while_1793277122905_7",
+      "type": "while",
       "position": {
-        "x": 184.88772096962282,
-        "y": 77.60830589493004
+        "x": 147.79619391181308,
+        "y": 115.45975508582278
+      },
+      "data": {
+        "cond": "1"
+      }
+    },
+    {
+      "id": "endloop_1793277125790_8",
+      "type": "endloop",
+      "position": {
+        "x": 130.25594478694796,
+        "y": 397.62682416455516
       },
       "data": {}
+    },
+    {
+      "id": "func_1793349110576_10",
+      "type": "func",
+      "position": {
+        "x": 187.7679463767806,
+        "y": 15.129019656925212
+      },
+      "data": {
+        "fn": "myRMT_OutputSetup",
+        "ret": "void",
+        "params": "int pin",
+        "header": "myRMT.h",
+        "args": "LED",
+        "result": ""
+      }
+    },
+    {
+      "id": "func_1793349127116_11",
+      "type": "func",
+      "position": {
+        "x": 173.03806374307464,
+        "y": 207.95657413453043
+      },
+      "data": {
+        "fn": "myRMT_OutputWS2812",
+        "ret": "int",
+        "params": "int r, int g, int b",
+        "header": "myRMT.h",
+        "args": "i++,255-i,0",
+        "result": ""
+      }
+    },
+    {
+      "id": "delay_1793349133074_12",
+      "type": "delay",
+      "position": {
+        "x": 182.41162541906937,
+        "y": 308.3875920916165
+      },
+      "data": {
+        "ms": "10"
+      }
     }
   ],
-  "edges": []
+  "edges": [
+    {
+      "id": "xy-edge__endloop_1793277125790_8-end",
+      "source": "endloop_1793277125790_8",
+      "target": "end",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__delay_1793349133074_12-endloop_1793277125790_8",
+      "source": "delay_1793349133074_12",
+      "target": "endloop_1793277125790_8",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__func_1793349127116_11-delay_1793349133074_12",
+      "source": "func_1793349127116_11",
+      "target": "delay_1793349133074_12",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__while_1793277122905_7body-func_1793349127116_11",
+      "source": "while_1793277122905_7",
+      "target": "func_1793349127116_11",
+      "sourceHandle": "body"
+    },
+    {
+      "id": "xy-edge__func_1793349110576_10-while_1793277122905_7",
+      "source": "func_1793349110576_10",
+      "target": "while_1793277122905_7",
+      "sourceHandle": null
+    },
+    {
+      "id": "xy-edge__start-func_1793349110576_10",
+      "source": "start",
+      "target": "func_1793349110576_10",
+      "sourceHandle": null
+    }
+  ]
 }

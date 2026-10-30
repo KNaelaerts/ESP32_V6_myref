@@ -1,0 +1,6 @@
+version: "0.1.0"
+description: ST7789 240x240 SPI display with LVGL
+dependencies:
+  idf: ">=5.2"
+  lvgl/lvgl: "^9"
+  espressif/esp_lvgl_port: "^2.6.0"
